@@ -1,6 +1,20 @@
 <template>
-    <div class="container">this is order
-     <button @click="handleBack">返回上一页</button>
+    <div class="container">
+      <div class="order-item col flex-item flex-justify-start">
+           <div class="item" v-for="(item,index) in list" :key="index">
+                <div class="item-header col flex-item-start flex-justify">
+                    待发货
+                </div>
+                <div class="content row flex-item flex-justify-start">
+                    <div class="left-img">
+
+                    </div>
+                    <div class="right-content">
+
+                    </div>
+                </div>
+           </div>
+      </div>
     </div>
 </template>
 
@@ -8,7 +22,9 @@
     export default {
         name: "index",
         data() {
-            return {}
+            return {
+                list:[{},{},{},{},{}]
+            }
         },
 //组件
         components: {},
@@ -18,17 +34,47 @@
         },
 //一些自定义方法
         methods: {
-            handleBack(){
-                this.$router.go(-1)
-            }
+
         }
     }
 </script>
 
 <style scoped lang="scss">
-.container{
-    width: 100%;
-    height: 100%;
-    background: #ff6666;
-}
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .order-item{
+        width: 100%;
+        overflow: hidden;
+    }
+    .item{
+        width: 710px;
+        height: 312px;
+    }
+    .item-header{
+        height: 78px;
+        width: 100%;
+        color: #ff6666;
+        font-size: 28px;
+    }
+    .content{
+        width: 100%;
+        height: 234px;
+        border-radius: 20px 20px 20px 20px;
+        background: #FFFFFF;
+        overflow: hidden;
+        .left-img{
+            width: 127px;
+            height: 176px;
+            background: #0A81FB;
+            margin-left: 44px;
+        }
+        .right-content{
+            width: 450px;
+            height: 100%;
+            background: #ff6666;
+            margin-left: 58px;
+        }
+    }
 </style>
