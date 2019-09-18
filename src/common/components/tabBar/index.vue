@@ -21,9 +21,15 @@
 <script>
     export default {
         name: "index",
+        props:{
+            currentType:{
+                type:String,
+                default:'home'
+            }
+        },
         data() {
             return {
-                currentType:'home'
+
             }
         },
 //组件
@@ -35,7 +41,7 @@
 //一些自定义方法
         methods: {
             switchTab(type){
-                this.currentType=type;
+                this.$emit('changeTabBarType',type);
                 if(type=='home'){
                     this.$router.replace({
                        path:'/index/home'
