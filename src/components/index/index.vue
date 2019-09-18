@@ -35,9 +35,6 @@
             }
 
         },
-        mounted(){
-
-        },
 //一些自定义方法
         methods: {
             changeTabBarType(e){
