@@ -1,0 +1,9 @@
+.picker-item.picker-selected{
+  color: #0A81FB;
+}
+/*这个兼容 indicator被覆盖的问题*/
+.mint-indicator{
+  position: fixed !important;
+  z-index: 1000 !important;
+}
+
