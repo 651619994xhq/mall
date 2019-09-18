@@ -70,12 +70,12 @@
         .img-view{
             width: 127px;
             height: 176px;
-            background: #888888;
+            background: #F7F6FB;
         }
         .content{
             width: 450px;
             height: 100%;
-            background: #0A81FB;
+            background: #888888;
             margin-left: 36px;
         }
     }

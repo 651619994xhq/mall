@@ -9,6 +9,7 @@ const shop = (resolve) => {import('@/components/shop/index').then((module) => {r
 const login = (resolve) => {import('@/components/login/index').then((module) => {resolve(module)})};
 const order = (resolve) => {import('@/components/order/index').then((module) => {resolve(module)})};
 const orderDetail = (resolve) => {import('@/components/orderDetail/index').then((module) => {resolve(module)})};
+const adress = (resolve) => {import('@/components/adress/index').then((module) => {resolve(module)})};
 
 Vue.use(Router);
 
@@ -22,6 +23,7 @@ let router = new Router({
         { path: '/login', name: 'login', component: login,meta:{title:'登录/注册',index:2}},
         { path: '/order', name: 'order', component: order,meta:{title:'我的订单',index:3}},
         { path: '/order-detail', name: 'orderDetail', component: order,meta:{title:'订单详情',index:4}},
+        { path: '/adress', name: 'adress', component: adress,meta:{title:'收货地址',index:4}},
 
     ]
 })

@@ -69,7 +69,7 @@
         methods: {
             hanldeTest(){
                 this.$router.push({
-                    path:'/order'
+                    path:'/order-detail'
                 })
             }
         }

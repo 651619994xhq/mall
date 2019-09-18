@@ -7,14 +7,14 @@
                <div class="login-btn">登录</div>
         </div>
         <div class="main row flex-item flex-justify-between">
-            <div class="item flex-grow col flex-item flex-justify">
+            <div class="item flex-grow col flex-item flex-justify" @click="handleGoToOrder">
                  <div class="img-icon1">
 
                  </div>
                 <div class="img-title">我的订单</div>
             </div>
             <div class="item-border"></div>
-            <div class="item flex-grow col flex-item flex-justify">
+            <div class="item flex-grow col flex-item flex-justify" @click="handleGoToAdress">
                 <div class="img-icon2">
 
                 </div>
@@ -37,7 +37,19 @@
 
         },
 //一些自定义方法
-        methods: {}
+        methods: {
+            handleGoToOrder(){
+              this.$router.push({
+                  path:'/order'
+              })
+            },
+            handleGoToAdress(){
+                this.$router.push({
+                   path:'/adress'
+                });
+            }
+
+        }
     }
 </script>
 
