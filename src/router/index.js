@@ -15,17 +15,24 @@ Vue.use(Router);
 
 let router = new Router({
     mode: 'hash',
+    scrollBehavior (to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return {x: 0, y: 0}
+        }
+    },
     routes: [
-        {
-            path: '/index', name: 'index', component: index,redirect:'/index/home',meta:{index:1},
-            children: [{path: 'home', name: 'home', component: home, meta: {title: '首页',index:1}},{path: 'mine', name: 'mine', component: mine, meta: {title: '我的',index:1}},{path: 'shop', name: 'shop', component: shop, meta: {title: '购物车',index:1}}]
-        },
-        { path: '/login', name: 'login', component: login,meta:{title:'登录/注册',index:2}},
-        { path: '/order', name: 'order', component: order,meta:{title:'我的订单',index:3}},
-        { path: '/order-detail', name: 'orderDetail', component: orderDetail,meta:{title:'订单详情',index:4}},
-        { path: '/address', name: 'address', component: address,meta:{title:'收货地址',index:4}},
+    {
+        path: '/index', name: 'index', component: index,redirect:'/index/home',meta:{index:1},
+        children: [{path: 'home', name: 'home', component: home, meta: {title: '首页',index:1}},{path: 'mine', name: 'mine', component: mine, meta: {title: '我的',index:1}},{path: 'shop', name: 'shop', component: shop, meta: {title: '购物车',index:1}}]
+    },
+    { path: '/login', name: 'login', component: login,meta:{title:'登录/注册',index:2}},
+    { path: '/order', name: 'order', component: order,meta:{title:'我的订单',index:3}},
+    { path: '/order-detail', name: 'orderDetail', component: orderDetail,meta:{title:'订单详情',index:4}},
+    { path: '/address', name: 'address', component: address,meta:{title:'收货地址',index:4}},
 
-    ]
+]
 })
 
 router.beforeEach((to, from, next) => {

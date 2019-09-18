@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <transition :name="transitionName">
-    <router-view v-if="isRouterAlive"></router-view>
+    <router-view v-if="isRouterAlive" class="child-view"></router-view>
     </transition>
   </div>
 </template>
@@ -40,6 +40,16 @@ export default {
 #app {
   width: 100%;
   height: 100%;
+  position: relative;
+}
+.child-view{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .6s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: 0;
 }
 /*切换页面时的滑动效果*/
 .views {
