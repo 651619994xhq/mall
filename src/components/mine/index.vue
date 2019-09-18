@@ -4,7 +4,7 @@
               <div class="img-view">
                   <img src="~image/header.png" alt="">
               </div>
-               <div class="login-btn">登录</div>
+               <div class="login-btn" @click="hanldeGoToLogin">登录</div>
         </div>
         <div class="main row flex-item flex-justify-between">
             <div class="item flex-grow col flex-item flex-justify" @click="handleGoToOrder">
@@ -45,8 +45,13 @@
             },
             handleGoToAdress(){
                 this.$router.push({
-                   path:'/adress'
+                   path:'/address'
                 });
+            },
+            hanldeGoToLogin(){
+                this.$router.push({
+                    path:'/login'
+                })
             }
 
         }

@@ -67,13 +67,13 @@
         .left-img{
             width: 127px;
             height: 176px;
-            background: #0A81FB;
+            background: #F7F6FB;
             margin-left: 44px;
         }
         .right-content{
             width: 450px;
             height: 100%;
-            background: #ff6666;
+            background: #888888;
             margin-left: 58px;
         }
     }
