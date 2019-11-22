@@ -28,7 +28,7 @@
     "postcss-px-to-viewport-opt": "^0.0.4",
     "postcss-viewport-units": "^0.1.6",
     "postcss-write-svg": "^3.0.1",
-    "vant": "^1.6.21",
+    "vant": "^2.1.8",
     "vue": "^2.5.2",
     "vue-pdf": "^4.0.7",
     "vue-router": "^3.0.1",
